@@ -18,5 +18,21 @@
     "_site/**": true
   },
   "files.insertFinalNewline": true,
-  "markdown.styles": [".vscode/custom-tag-style.css"]
+  "markdown.styles": [".vscode/custom-tag-style.css"],
+
+  // Automatically install recommended extensions
+  "workbench.extensions.autoInstallation": "on",
+
+  // Recommended extensions list (will auto-install if missing)
+  "extensions.recommendations": [
+    "foam.foam-vscode",
+    "yzhang.markdown-all-in-one",
+    "esbenp.prettier-vscode",
+    "philipbe.theme-gray-matter",
+    "streetsidesoftware.code-spell-checker",
+    "scalet.let-icons",
+    "yunierolivera.markdown-quarto-word-count",
+    "zaaack.markdown-editor",
+    "carlocardella.vscode-texttoolbox"
+  ]
 }

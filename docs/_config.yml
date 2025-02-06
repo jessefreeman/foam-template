@@ -21,7 +21,7 @@ plugins:
 # Default front matter for blog posts
 defaults:
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: "post"

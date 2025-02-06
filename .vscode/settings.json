@@ -1,8 +1,6 @@
 {
   "files.autoSave": "onFocusChange",
-  "editor.minimap.enabled": false,
   "editor.wrappingIndent": "indent",
-  "editor.overviewRulerBorder": false,
   "editor.lineHeight": 24,
   "foam.edit.linkReferenceDefinitions": "withExtensions",
   "[markdown]": {
@@ -19,20 +17,21 @@
   },
   "files.insertFinalNewline": true,
   "markdown.styles": [".vscode/custom-tag-style.css"],
-
-  // Automatically install recommended extensions
-  "workbench.extensions.autoInstallation": "on",
-
-  // Recommended extensions list (will auto-install if missing)
-  "extensions.recommendations": [
-    "foam.foam-vscode",
-    "yzhang.markdown-all-in-one",
-    "esbenp.prettier-vscode",
-    "philipbe.theme-gray-matter",
-    "streetsidesoftware.code-spell-checker",
-    "scalet.let-icons",
-    "yunierolivera.markdown-quarto-word-count",
-    "zaaack.markdown-editor",
-    "carlocardella.vscode-texttoolbox"
-  ]
+  "workbench.statusBar.visible": false,   // Hide Status Bar (bottom info bar)
+  "workbench.tips.enabled": false,        // Disable startup tips
+  "editor.minimap.enabled": false,        // Hide minimap in the editor
+  "editor.overviewRulerBorder": false,    // Hide scrollbar ruler border
+  "editor.renderLineHighlight": "none",   // Remove line highlight
+  "editor.glyphMargin": false,            // Hide left-side marker column
+  "workbench.editor.showTabs": "multiple",     // Hide editor tabs
+  "workbench.panel.defaultLocation": "bottom", // Keep bottom panel hidden unless needed
+  "extensions.ignoreRecommendations": true, // Prevent extension prompts
+  "workbench.statusBar.feedback.visible": false, // Hide feedback button
+  "editor.showFoldingControls": "never", // Remove folding icons
+  "editor.hover.enabled": false, // Disable hover tooltips
+  "editor.codeLens": false, // Remove inline code hints
+  "editor.inlayHints.enabled": "off", // Disable parameter hints in the editor
+  "git.enabled": true, // Hide Git status items
+  "debug.showInStatusBar": "never",
+  "gitdoc.enabled": true, // Hide debug status items
 }

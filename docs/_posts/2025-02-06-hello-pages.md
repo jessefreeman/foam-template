@@ -3,8 +3,7 @@
 layout: post
 title: "Hello Pages"
 date: 2025-02-06
-tags:
-  - blog
+tags: [blog, unsorted]
 image: "assets/images/hello-pages.jpg"
 ---
 

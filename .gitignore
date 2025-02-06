@@ -1,0 +1,11 @@
+# Ignore GitHub Pages (Jekyll) build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+Gemfile.lock
+vendor/
+
+# Ignore temporary files
+*.log
+.DS_Store
+Thumbs.db

@@ -1,39 +1,95 @@
-<img src="attachments/foam-icon.png" width=100 align="left">
+# **Foam Knowledge Base & Blog Setup**
 
-# Foam
+This repository is designed to **organize personal notes, daily logs, and blog posts** using Foam and publish shareable content via **GitHub Pages**.
 
-**👋 Welcome to your new Foam Knowledge Base!**
+## **Foam Basics**
 
-## Getting started
+Foam is a **personal knowledge management tool** built on **VS Code + Markdown**. It allows:
 
-This documentation assumes that you have a GitHub account and have [Visual Studio Code](https://code.visualstudio.com/) installed on your Linux/macOS/Windows machine.
+- **Backlinking (`[[note-name]]`)** to connect notes.
+- **Graph view** to visualize relationships.
+- **Templates** to quickly create structured notes.
 
-1. If you haven't yet, browse over to the main [Foam documentation](https://foambubble.github.io/foam) to get an idea of what Foam is and how to use it.
-2. Press "Use this template" button at [foam-template](https://github.com/foambubble/foam-template/generate) (that's this repository!) to fork it to your own GitHub account. If you want to keep your thoughts to yourself, remember to set the repository private.
-3. [Clone the repository to your local machine](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) and open it in VS Code.
+### **Core Commands**
 
-    *Open the repository as a folder using the `File > Open...` menu item.*
+| Action                  | Command                                 |
+| ----------------------- | --------------------------------------- |
+| Create a new note       | `Foam: Create New Note`               |
+| Create from template    | `Foam: Create New Note From Template` |
+| Open today's daily note | `Foam: Open Daily Note`               |
+| Fix broken links        | `Foam: Run Janitor`                   |
+| Preview Foam Graph      | `Foam: Show Graph`                    |
 
-4. When prompted to install recommended extensions, click **Install all** (or **Show Recommendations** if you want to review and install them one by one)
+## **Folder Structure & Workflow**
 
-After setting up the repository, head to [getting started](./getting-started.md) to get familiar with your new knowledge base!
+To maintain **organization and clarity**, notes are categorized into three sections:
 
-To learn more about how to use **Foam**, read the [Recipes](https://foambubble.github.io/foam/user/recipes/recipes) bubbles of the Foam documentation workspace.
+```
+docs/               # Personal dev notes (private)`
+inbox/              # Daily notes (private)
+pages/
+├── _posts/         # Blog posts (public)
+├── assets/images/  # Images for blog posts
+└── _config.yml     # GitHub Pages settings
+```
 
-And remember that you can always join our [Foam community on Discord](https://foambubble.github.io/join-discord/g)!
+### **1️⃣ Daily Notes (`inbox/YYYY/MM/DD.md`)**
 
-## Using Foam
+- Stored in`/inbox/` under**year/month/day.md**.
+- Used for**logging daily thoughts, meetings, work summaries**.
+- Created using the`Foam: Open Daily Note` command.
+- **Private**,**not published** to GitHub Pages.
 
-We've created a few Bubbles (Markdown documents) to get you started.
+### **2️⃣ General Notes (`notes/`)**
 
-- [inbox](./inbox.md) - a place to write down quick notes to be categorized later
-- [getting-started](./getting-started.md) - learn how to use your Foam workspace
-- [todo](./todo.md) - a place to keep track of things to do
+- Stored in`/notes/` and organized by topic.
+- Used for**project documentation, ideas, research, learning**.
+- Can be linked using`[[note-name]]`.
+- **Private**,**not published** to GitHub Pages.
 
-In the `docs` directory you can find everything you need to learn the basics of Foam.
+### **3️⃣ Blog Posts (`_posts/YYYY-MM-DD-title.md`)**
 
-## Submitting Issues
+- Stored in`/_posts/` with filenames**`YYYY-MM-DD-title.md`**.
+- Written as cleaned-up,**public-facing content** derived from notes.
+- Published to GitHub Pages and automatically indexed in`/blog/`.
 
-As you may have noticed, issues are disabled. With the goal to keep the project fairly easy to maintain, please file your issues in the main Foam repository:
+### **Images for Posts**
 
-> <https://github.com/foambubble/foam>
+- **Stored in `/assets/images/`**.
+- Referenced using relative paths:
+  ```markdown
+  ![Alt text](../assets/images/image-name.jpg)
+  ```
+
+---
+
+## **Publishing Blog Posts via GitHub Pages**
+
+GitHub Pages is configured to **automatically publish anything in `/pages/`**.To enable it:
+
+1. **Go to repository settings** →`Settings > Pages`.
+2. **Under "Source"**, choose**"Deploy from a branch"**.
+3. **Set "Branch" to `main`**, and folder to`/pages/`.
+4. **Click "Save"**.
+5. **Your blog will be live at:**
+   ```
+   https://yourusername.github.io/repository-name/blog/
+   ```
+
+### **How New Blog Posts Get Published**
+
+- Add a new file in`_posts/` following the format**`YYYY-MM-DD-title.md`**.
+- Push changes to`main`, and GitHub Pages will**auto-generate the blog index**.
+
+---
+
+## **Foam Workflow Summary**
+
+| Task              | Location                        | Notes                                      |
+| ----------------- | ------------------------------- | ------------------------------------------ |
+| Quick daily logs  | `/inbox/YYYY/MM/DD.md`        | Private, for tracking work & thoughts      |
+| Permanent notes   | `/notes/`                     | Organized reference notes, research, ideas |
+| Public blog posts | `/_posts/YYYY-MM-DD-title.md` | Shared articles, published automatically   |
+| Images for posts  | `/assets/images/`             | Stored separately for Markdown linking     |
+
+**Use daily notes to track work, developer notes for a specific project or feature, and blog posts to share polished content.**

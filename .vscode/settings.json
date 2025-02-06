@@ -34,4 +34,8 @@
   "git.enabled": true, // Hide Git status items
   "debug.showInStatusBar": "never",
   "gitdoc.enabled": true, // Hide debug status items
+  "foam.openDailyNote.directory": "inbox/${FOAM_DATE_YEAR}/${FOAM_DATE_MONTH}/",
+  "foam.openDailyNote.filenameFormat": "'daily-note'-yyyy-mm-dd",
+  "foam.openDailyNote.fileExtension": "md",
+  "foam.openDailyNote.titleFormat": "'Notes on ' dddd, mmmm d",
 }

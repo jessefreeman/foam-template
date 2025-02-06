@@ -2,7 +2,7 @@
 foam_template:
   name: Development Note
   description: A template for capturing documentation during development.
-  filepath: "docs/$FOAM_DATE_YEAR/$FOAM_DATE_MONTH/$FOAM_DATE_DATE/$FOAM_SLUG.md"
+  filepath: "pages/$FOAM_DATE_YEAR/$FOAM_DATE_MONTH/$FOAM_DATE_DATE/$FOAM_SLUG.md"
 
   tags: 
   - project-name

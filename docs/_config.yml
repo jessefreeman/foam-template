@@ -1,22 +1,24 @@
 title: "My Foam Blog"
 description: "A collection of notes turned into blog posts."
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: chesterhow/tale  # Using Tale as a remote theme
+
+baseurl: "/foam-template"  # ✅ Important! Must match repo name
+url: "https://jessefreeman.github.io"
+
+permalink: /:year-:month-:day/:title  # Clean URLs
+paginate: 5  # Enables pagination
 
 plugins:
-  - jekyll-remote-theme  # Required for GitHub Pages to use remote themes
-  - jekyll-seo-tag       # Adds metadata for SEO
-  - jekyll-sitemap       # Generates sitemap.xml
-  - jekyll-feed          # Enables RSS feed for blog
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
-show_downloads: false  # Hide "Download" button in the footer
-google_analytics: ""  # Add your tracking ID if needed
+# Optional: Disqus for comments
+disqus: ""  # Add your Disqus ID if needed
 
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
+show_downloads: false  # Removes "Download" button
 
 include:
-  - assets  # Ensures custom CSS and images are accessible
-
-permalink: pretty  # Clean URLs without .html
+  - assets  # Ensures Jekyll loads CSS files

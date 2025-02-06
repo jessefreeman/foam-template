@@ -1,9 +1,9 @@
 @import "{{ site.theme }}";
 
-/* Custom Dark Theme */
+/* Custom Dark Mode */
 body {
-  background-color: #1e1e1e;
-  color: #dcdcdc;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 a {
@@ -11,10 +11,10 @@ a {
 }
 
 .site-header {
-  background-color: #252526;
+  background-color: #1c1c1c;
 }
 
 .site-footer {
-  background-color: #252526;
+  background-color: #1c1c1c;
   color: #ffffff;
 }

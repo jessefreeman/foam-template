@@ -10,7 +10,7 @@ collections:
 
 # Base URL settings
 baseurl: ""  # Leave blank if deploying at repo root
-url: "https://yourusername.github.io/repository-name"
+url: "https://jessefreeman.github.io/foam-template"
 
 # Enable plugins for SEO and RSS
 plugins:

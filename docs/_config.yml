@@ -1,35 +1,33 @@
 title: "My Foam Blog"
 author: "Jesse Freeman"
-email: "your-email@domain.com"
 description: "A collection of notes turned into blog posts."
-favicon: "./favicon.ico"
+lang: "en"
 
-# Theme Setup
-remote_theme: huangyz0918/moving  # ✅ Enables Moving theme on GitHub Pages
+# Use Contrast as a remote theme
+remote_theme: niklasbuschmann/contrast@v2.11
 
-# Site URL Setup
-baseurl: "/foam-template"  # ✅ Must match your repo name
+# Base URL for GitHub Pages
+baseurl: "/foam-template"  # Must match your repo name
 url: "https://jessefreeman.github.io"
 
-# Blog Settings
+# Blog settings
 permalink: /:year-:month-:day/:title/  # Clean URLs
 paginate: 5  # Enables pagination
+excerpt_separator: "\n\n\n"  # Defines how excerpts are generated
+date_format: "%B %d, %Y"  # Format dates as "February 6, 2024"
 
-# Moving Theme Customizations
-moving:
-  avatar_url: "https://i.loli.net/2019/08/26/JzCLhDWPEybZr2T.jpg"  # Customize this
-  about_you: "A minimalist blog powered by Jekyll."
-  date_format: "%b %d"  # Customize date format
-  back_to: "Home"  # Customize the back button text
+# Hide extra UI elements
+show_excerpts: true  # Shows previews of posts on the homepage
+show_frame: false    # Removes the gray border
+show_sidebar: false  # Hides the sidebar
 
-# Enable Plugins
+# Remove top navigation
+navigation: []
+
+# Enable required plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
+  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
-
-# Ensure assets (CSS & images) are included
-include:
-  - assets

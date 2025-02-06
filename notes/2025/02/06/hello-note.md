@@ -1,13 +1,8 @@
 ---
 title: "Hello Note"
 date: 2025-02-06
-tags:
-  - note
-  - unsorted
-image: "../assets/images/hello-note.jpg"
+tags: [note, unsorted]
 ---
-
-# Hello Note
 
 [Describe what you're working on]
 

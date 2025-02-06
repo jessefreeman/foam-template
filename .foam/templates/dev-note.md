@@ -3,12 +3,9 @@ foam_template:
   name: Dev Note
   description: A template for developer notes.
   filepath: "notes/$FOAM_DATE_YEAR/$FOAM_DATE_MONTH/$FOAM_DATE_DATE/$FOAM_SLUG.md"
-title: [[hello-note]]
+title: "$FOAM_TITLE"
 date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
-tags:
-  - note
-  - unsorted
-image: "../assets/images/$FOAM_SLUG.jpg"
+tags: [note, unsorted]
 ---
 
 # $FOAM_TITLE
@@ -33,10 +30,10 @@ Document what you learn as you go.
 - [ ] Task 2
 - [ ] Task 3
 
-## Promp Snippets
+## Prompt Snippets
 
 ```
-Enter propt here
+Enter prompt here
 ```
 
 ## Code Snippets

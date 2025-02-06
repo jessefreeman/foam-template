@@ -1,13 +1,28 @@
 title: "My Foam Blog"
+author: "Jesse Freeman"
+email: "your-email@domain.com"
 description: "A collection of notes turned into blog posts."
-remote_theme: chesterhow/tale  # Using Tale as a remote theme
+favicon: "./favicon.ico"
 
-baseurl: "/foam-template"  # ✅ Important! Must match repo name
+# Theme Setup
+remote_theme: huangyz0918/moving  # ✅ Enables Moving theme on GitHub Pages
+
+# Site URL Setup
+baseurl: "/foam-template"  # ✅ Must match your repo name
 url: "https://jessefreeman.github.io"
 
-permalink: /:year-:month-:day/:title  # Clean URLs
+# Blog Settings
+permalink: /:year-:month-:day/:title/  # Clean URLs
 paginate: 5  # Enables pagination
 
+# Moving Theme Customizations
+moving:
+  avatar_url: "https://i.loli.net/2019/08/26/JzCLhDWPEybZr2T.jpg"  # Customize this
+  about_you: "A minimalist blog powered by Jekyll."
+  date_format: "%b %d"  # Customize date format
+  back_to: "Home"  # Customize the back button text
+
+# Enable Plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
@@ -15,10 +30,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-# Optional: Disqus for comments
-disqus: ""  # Add your Disqus ID if needed
-
-show_downloads: false  # Removes "Download" button
-
+# Ensure assets (CSS & images) are included
 include:
-  - assets  # Ensures Jekyll loads CSS files
+  - assets

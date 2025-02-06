@@ -1,33 +1,24 @@
 title: "My Foam Blog"
-author: "Jesse Freeman"
 description: "A collection of notes turned into blog posts."
-lang: "en"
+remote_theme: chesterhow/tale  # Using Tale as a remote theme
 
-# Use Contrast as a remote theme
-remote_theme: niklasbuschmann/contrast@v2.11
-
-# Base URL for GitHub Pages
-baseurl: "/foam-template"  # Must match your repo name
+baseurl: "/foam-template"  # ✅ Important! Must match repo name
 url: "https://jessefreeman.github.io"
 
-# Blog settings
-permalink: /:year-:month-:day/:title/  # Clean URLs
+permalink: /:year-:month-:day/:title  # Clean URLs
 paginate: 5  # Enables pagination
-excerpt_separator: "\n\n\n"  # Defines how excerpts are generated
-date_format: "%B %d, %Y"  # Format dates as "February 6, 2024"
 
-# Hide extra UI elements
-show_excerpts: true  # Shows previews of posts on the homepage
-show_frame: false    # Removes the gray border
-show_sidebar: false  # Hides the sidebar
-
-# Remove top navigation
-navigation: []
-
-# Enable required plugins
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+
+# Optional: Disqus for comments
+disqus: ""  # Add your Disqus ID if needed
+
+show_downloads: false  # Removes "Download" button
+
+include:
+  - assets  # Ensures Jekyll loads CSS files

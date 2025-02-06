@@ -1,35 +1,22 @@
 title: "My Foam Blog"
 description: "A collection of notes turned into blog posts."
-remote_theme: jekyll/minima
+remote_theme: pages-themes/minimal@v0.2.0
 
-# Enable Jekyll's blog feature
+plugins:
+  - jekyll-remote-theme  # Required for GitHub Pages to use remote themes
+  - jekyll-seo-tag       # Adds metadata for SEO
+  - jekyll-sitemap       # Generates sitemap.xml
+  - jekyll-feed          # Enables RSS feed for blog
+
+show_downloads: false  # Hide "Download" button in the footer
+google_analytics: ""  # Add your tracking ID if needed
+
 collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
 
-# Base URL settings
-baseurl: "/foam-template"  # Leave blank if deploying at repo root
-url: "https://jessefreeman.github.io"
+include:
+  - assets  # Ensures custom CSS and images are accessible
 
-# Enable plugins for SEO and RSS
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-
-# Default front matter for blog posts
-defaults:
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: "post"
-
-# Image handling (optional)
-defaults:
-  - scope:
-      path: "images"
-    values:
-      image: true
-
+permalink: pretty  # Clean URLs without .html

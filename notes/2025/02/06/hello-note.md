@@ -1,17 +1,13 @@
 ---
-foam_template:
-  name: Dev Note
-  description: A template for developer notes.
-  filepath: "notes/$FOAM_DATE_YEAR/$FOAM_DATE_MONTH/$FOAM_DATE_DATE/$FOAM_SLUG.md"
-title: [[hello-note]]
-date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
+title: "Hello Note"
+date: 2025-02-06
 tags:
   - note
   - unsorted
-image: "../assets/images/$FOAM_SLUG.jpg"
+image: "../assets/images/hello-note.jpg"
 ---
 
-# $FOAM_TITLE
+# Hello Note
 
 [Describe what you're working on]
 
@@ -53,4 +49,4 @@ Enter code here
 
 - **Previous Note:** [[previous-note]] (Update this manually)
 
-Note Created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
+Note Created: 2025-02-06

@@ -9,8 +9,8 @@ collections:
     permalink: /blog/:year/:month/:day/:title/
 
 # Base URL settings
-baseurl: ""  # Leave blank if deploying at repo root
-url: "https://jessefreeman.github.io/foam-template"
+baseurl: "/foam-template"  # Leave blank if deploying at repo root
+url: "https://jessefreeman.github.io"
 
 # Enable plugins for SEO and RSS
 plugins:
@@ -21,7 +21,7 @@ plugins:
 # Default front matter for blog posts
 defaults:
   - scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
       layout: "post"
@@ -29,6 +29,7 @@ defaults:
 # Image handling (optional)
 defaults:
   - scope:
-      path: "assets/images"
+      path: "images"
     values:
       image: true
+

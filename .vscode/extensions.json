@@ -1,6 +1,4 @@
 {
-  // See http://go.microsoft.com/fwlink/?LinkId=827846
-  // for the documentation about the extensions.json format
   "recommendations": [
     // Foam's own extension (version 0.25.12 is installed automatically due to compatibility issues in code-server)
     "foam.foam-vscode",
@@ -10,9 +8,6 @@
 
     // Prettier for auto formatting code
     "esbenp.prettier-vscode",
-
-    // Understated grayscale theme (light and dark variants)
-    "philipbe.theme-gray-matter",
 
     // Spell checker for markdown content
     "streetsidesoftware.code-spell-checker",
@@ -27,6 +22,12 @@
     "zaaack.markdown-editor",
 
     // Handy text transformation tools
-    "carlocardella.vscode-texttoolbox"
+    "carlocardella.vscode-texttoolbox",
+
+    // Expands Markdown links in editor
+    "skn0tt.markdown-link-expander",
+
+    // Git-backed collaborative documentation
+    "vsls-contrib.gitdoc"
   ]
 }

@@ -2,6 +2,12 @@ title: "My Foam Blog"
 description: "A collection of notes turned into blog posts."
 remote_theme: chesterhow/tale  # ✅ Enables Tale theme
 
+# Author
+author:
+  name:         Jesse Freeman
+  url:          https://jessefreeman.com
+  email:        jessefreeman@gmail.com
+
 # Site URL for GitHub Pages
 baseurl: "/foam-template"  # ✅ Must match your repo name
 url: "https://jessefreeman.github.io"
@@ -18,10 +24,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Hide About page
-navigation: []
-
-# Enable Tags
-collections:
-  tags:
-    output: true
+# Build settings
+markdown:       kramdown
+include:
+  - _pages

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Posts"
+title: "All Posts"
 permalink: /
 ---
 
@@ -11,26 +11,57 @@ permalink: /
   </div>
 </div>
 
-{% for post in site.posts %}
-  <div class="tags-item">
-    <h2 class="tags-item-label">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <div class="tags-post-line"></div>
-    <span class="tags-post-meta">
-      <time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-    </span>
-    <p>{{ post.excerpt }}</p>
-  </div>
-{% endfor %}
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Newer Posts</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &raquo;</a>
-  {% endif %}
+<!-- ✅ Filter Buttons -->
+<div class="tags-clouds">
+  <a href="#" onclick="showAllPosts()" class="filter-button">Show All</a>
+  {% for tag in site.tags %}
+    <a href="#" onclick="filterByTag('{{ tag[0] }}')" class="filter-button">{{ tag[0] }}</a>
+  {% endfor %}
 </div>
-{% endif %}
+
+<!-- ✅ List All Posts Sorted by Date -->
+{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+<div id="posts-container">
+  {% for post in sorted_posts %}
+    <div class="tags-item post-entry" data-tags="{{ post.tags | join: ' ' }}">
+      <h2 class="tags-item-label">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <div class="tags-post-line"></div>
+      <span class="tags-post-meta">
+        <time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      </span>
+      <p>{{ post.excerpt }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- ✅ JavaScript for Filtering -->
+<script>
+  function showAllPosts() {
+    document.querySelectorAll('.post-entry').forEach(post => {
+      post.style.display = 'block';
+    });
+  }
+
+  function filterByTag(tag) {
+    document.querySelectorAll('.post-entry').forEach(post => {
+      post.style.display = post.getAttribute('data-tags').includes(tag) ? 'block' : 'none';
+    });
+  }
+</script>
+
+<!-- ✅ Basic CSS for Filters -->
+<style>
+  .filter-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .filter-button:hover {
+    background: #bbb;
+  }
+</style>

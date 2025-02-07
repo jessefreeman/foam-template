@@ -1,6 +1,6 @@
 title: "My Foam Blog"
 description: "A collection of notes turned into blog posts."
-remote_theme: chesterhow/tale  # ✅ Enables Tale theme
+remote_theme: jessefreeman/tale  # ✅ Enables Tale theme
 
 # Author
 author:

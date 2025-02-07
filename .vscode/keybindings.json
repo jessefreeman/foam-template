@@ -7,8 +7,79 @@
 // 4. Paste the snippet below or add it to the existing shortcuts array:
 
 [
+  // Disable all default bindings for these keys
   {
-    "key": "cmd+shift+n",
+    "key": "ctrl+shift+1",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+2",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+3",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+4",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+6",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+7",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+8",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+9",
+    "command": ""
+  },
+  {
+    "key": "ctrl+shift+0",
+    "command": ""
+  },
+
+  // Assign new Foam-specific shortcuts
+  {
+    "key": "ctrl+shift+1",
     "command": "foam-vscode.create-note"
+  },
+  {
+    "key": "ctrl+shift+2",
+    "command": "workbench.view.outline"
+  },
+  {
+    "key": "ctrl+shift+3",
+    "command": "workbench.view.timeline"
+  },
+  {
+    "key": "ctrl+shift+4",
+    "command": "foam-vscode.show-connections"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "foam-vscode.show-tags"
+  },
+  {
+    "key": "ctrl+shift+6",
+    "command": "foam-vscode.show-notes"
+  },
+  {
+    "key": "ctrl+shift+7",
+    "command": "foam-vscode.show-orphans"
+  },
+  {
+    "key": "ctrl+shift+8",
+    "command": "foam-vscode.show-placeholders"
   }
 ]

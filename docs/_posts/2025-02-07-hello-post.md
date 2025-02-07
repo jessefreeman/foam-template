@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Hello Pages"
+title: "Hello Post"
 date: 2025-02-07
 tags: [blog, unsorted]
 ---
 
-# Hello Pages
+# Hello Post
 
 *Originally written on 2025-02-07*
 
-![Images go in the same folder as this markdown file](foam-icon.png)
+![All images go in the _posts/images folder.](images/foam-icon.png)
 
 [Write your cleaned-up content here.]

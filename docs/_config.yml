@@ -4,16 +4,16 @@ remote_theme: jessefreeman/tale  # ✅ Enables Tale theme
 
 # Author
 author:
-  name:         Jesse Freeman
-  url:          https://jessefreeman.com
-  email:        jessefreeman@gmail.com
+  name: Jesse Freeman
+  url: https://jessefreeman.com
+  email: jessefreeman@gmail.com
 
 # Site URL for GitHub Pages
 baseurl: "/foam-template"  # ✅ Must match your repo name
 url: "https://jessefreeman.github.io"
 
 # Blog settings
-# permalink: /:year-:month-:day/:title  # Clean URLs
+permalink: /:year-:month-:day/:title/  # ✅ Ensures clean URLs
 paginate: 5  # Enables pagination
 
 # Enable required plugins
@@ -25,6 +25,7 @@ plugins:
   - jekyll-sitemap
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 include:
-  - _pages
+  - _pages  # Keep for static pages
+

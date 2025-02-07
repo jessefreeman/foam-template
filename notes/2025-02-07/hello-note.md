@@ -1,8 +1,10 @@
 ---
 title: "Hello Note"
-date: 2025-02-06
+date: 2025-02-07
 tags: [note, unsorted]
 ---
+
+# Hello Note
 
 [Describe what you're working on]
 
@@ -24,10 +26,10 @@ Document what you learn as you go.
 - [ ] Task 2
 - [ ] Task 3
 
-## Promp Snippets
+## Prompt Snippets
 
 ```
-Enter propt here
+Enter prompt here
 ```
 
 ## Code Snippets
@@ -44,4 +46,4 @@ Enter code here
 
 - **Previous Note:** [[previous-note]] (Update this manually)
 
-Note Created: 2025-02-06
+Note Created: 2025-02-07

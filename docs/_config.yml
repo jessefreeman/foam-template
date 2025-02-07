@@ -13,7 +13,7 @@ baseurl: "/foam-template"  # ✅ Must match your repo name
 url: "https://jessefreeman.github.io"
 
 # Blog settings
-permalink: /:year-:month-:day/:title/  # Clean URLs
+permalink: /:year-:month-:day/:title  # Clean URLs
 paginate: 5  # Enables pagination
 
 # Enable required plugins

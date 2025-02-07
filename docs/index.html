@@ -11,11 +11,11 @@ permalink: /
   </div>
 </div>
 
-<!-- ✅ Filter Buttons -->
+<!-- ✅ Tag Filter Buttons -->
 <div class="tags-clouds">
   <a href="#" onclick="showAllPosts()" class="filter-button">Show All</a>
   {% for tag in site.tags %}
-    <a href="#" onclick="filterByTag('{{ tag[0] }}')" class="filter-button">{{ tag[0] }}</a>
+    <a href="#" onclick="filterByTag(event, '{{ tag[0] }}')" class="filter-button">{{ tag[0] }}</a>
   {% endfor %}
 </div>
 
@@ -23,7 +23,7 @@ permalink: /
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 <div id="posts-container">
   {% for post in sorted_posts %}
-    <div class="tags-item post-entry" data-tags="{{ post.tags | join: ' ' }}">
+    <div class="tags-item post-entry" data-tags="{{ post.tags | join: ',' }}">
       <h2 class="tags-item-label">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
@@ -36,7 +36,7 @@ permalink: /
   {% endfor %}
 </div>
 
-<!-- ✅ JavaScript for Filtering -->
+<!-- ✅ JavaScript for Filtering (Fixed) -->
 <script>
   function showAllPosts() {
     document.querySelectorAll('.post-entry').forEach(post => {
@@ -44,9 +44,11 @@ permalink: /
     });
   }
 
-  function filterByTag(tag) {
+  function filterByTag(event, tag) {
+    event.preventDefault();
     document.querySelectorAll('.post-entry').forEach(post => {
-      post.style.display = post.getAttribute('data-tags').includes(tag) ? 'block' : 'none';
+      const tags = post.getAttribute('data-tags').split(',');
+      post.style.display = tags.includes(tag) ? 'block' : 'none';
     });
   }
 </script>
@@ -60,6 +62,7 @@ permalink: /
     background: #ddd;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
   }
   .filter-button:hover {
     background: #bbb;

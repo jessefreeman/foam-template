@@ -9,8 +9,6 @@ date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
 tags: [blog, unsorted]
 ---
 
-# $FOAM_TITLE
-
 *Originally written on $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE*
 
 ![All images go in the _posts/images folder.](images/foam-icon.png)

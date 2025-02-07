@@ -28,4 +28,4 @@ plugins:
 markdown: kramdown
 include:
   - _pages  # Keep for static pages
-
+  - _posts/images  # ✅ Force Jekyll to include the images folder

@@ -14,7 +14,7 @@ permalink: /
 {% for post in paginator.posts %}
   <div class="tags-item">
     <h2 class="tags-item-label">
-      <a href="{{ post.relative_path | relative_url }}">{{ post.title }}</a>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
     <div class="tags-post-line"></div>
     <span class="tags-post-meta">
